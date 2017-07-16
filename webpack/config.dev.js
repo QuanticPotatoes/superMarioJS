@@ -1,42 +1,41 @@
-import config from "./config.shared.js";
+import path from 'path';
+import webpack from 'webpack';
+import copyWebpackPlugin from 'copy-webpack-plugin';
 
-import path from "path";
-import webpack from "webpack";
-import copyWebpackPlugin from "copy-webpack-plugin";
+import config from './config.shared';
 
 export default {
+  ...config,
 
-    ...config,
+  devtool: '#source-map',
 
-    devtool: "#source-map",
+  plugins: [
+    ...config.plugins,
+    new webpack.NoErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 
-    plugins: [
-        ...config.plugins,
-        new webpack.NoErrorsPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+  module: {
+    ...config.module,
+    preLoaders: [
+      {
+        test: /\.js$/,
+        include: [path.resolve(__dirname, '../src')],
+        loader: 'eslint-loader',
+      },
     ],
+  },
 
-    module: {
-        ...config.module,
-        preLoaders: [{
-            test: /\.js$/,
-            include: [
-                path.resolve(__dirname, "../src")
-            ],
-            loader: "eslint-loader",
-        }]
-    },
+  eslint: {
+    failOnWarning: false,
+    failOnError: false,
+    emitWarning: true,
+    quiet: true,
+  },
 
-    eslint: {
-        failOnWarning: false,
-        failOnError: false,
-        emitWarning: true,
-        quiet: true
-    },
+  historyApiFallback: {
+    index: 'index.html',
+  },
 
-    historyApiFallback: {
-        index: "index.html"
-    },
-
-    contentBase: path.resolve(`${__dirname}/../static`)
+  contentBase: path.resolve(`${__dirname}/../static`),
 };
