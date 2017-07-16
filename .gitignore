@@ -41,7 +41,6 @@ typings/
 
 # Optional npm cache directory
 .npm
-npm-debug.log
 
 # Optional eslint cache
 .eslintcache
@@ -57,3 +56,4 @@ npm-debug.log
 
 # dotenv environment variables file
 .env
+Supprimerait .idea/
