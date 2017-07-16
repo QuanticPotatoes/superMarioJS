@@ -1,4 +1,4 @@
-# Pixi-Babel
+# superMarioJS
 
 Pixi boilerplate using Webpack and Babel. Partially based off [Lapixx/phaser-babel](https://github.com/Lapixx/phaser-babel)
 
@@ -53,3 +53,4 @@ This will copy all build artifacts to the `dist/` folder.
 *(You may run into CORS errors when trying to open the `dist/index.html` file
 directly. Make sure to serve this folder using a file server instead, or wrap
 everything inside another framework of your choice for distribution.)*
+=======
