@@ -1,5 +1,5 @@
 {
-  "name": "pixi-babel",
+  "name": "super-mario-js",
   "version": "0.0.1",
   "description": "Pixi boilerplate with Webpack and Babel",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lapixx/pixi-babel.git"
+    "url": "git+https://github.com/QuanticPotatoes/superMarioJS"
   },
-  "author": "Tijn Kersjes <tijn@divbyzero.nl>",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Lapixx/pixi-babel/issues"
+    "url": "https://github.com/QuanticPotatoes/superMarioJS/issues"
   },
-  "homepage": "https://github.com/Lapixx/pixi-babel#readme",
+  "homepage": "https://github.com/QuanticPotatoes/superMarioJS#readme",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-loader": "^6.2.5",
