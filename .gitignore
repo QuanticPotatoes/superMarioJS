@@ -56,6 +56,10 @@ typings/
 
 # dotenv environment variables file
 .env
+<<<<<<< HEAD
 
 # build artifacts
 dist/
+=======
+Supprimerait .idea/
+>>>>>>> 9f57671ce275ed5ee3a9ac25a5cf56c0b9ee84f2
